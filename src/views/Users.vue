@@ -5,7 +5,7 @@
     </div>
     <user-list v-else :list="list" @click="removeFromList"></user-list>
 
-    <button type="button" @click="loadData">
+    <button type="button" class="btn btn-success" @click="loadData">
       Загрузить данные
     </button>
   </div>
