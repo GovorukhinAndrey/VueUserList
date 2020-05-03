@@ -10,6 +10,9 @@
     <button type="button" class="btn btn-success btn-block" @click="saveChanges">
       Добавить пользователя
     </button>
+    <button type="button" class="btn btn-danger btn-block" @click="reset">
+      Сбросить
+    </button>
   </div>
 </template>
 
@@ -48,6 +51,9 @@ export default {
       axios.post(this.url, this.user).then(() => {
         this.$route.push({ path: '/users' });
       });
+    },
+    reset() {
+      this.user = emptyObj;
     },
   },
 };
