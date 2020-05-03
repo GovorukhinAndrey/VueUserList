@@ -101,6 +101,9 @@ export default {
     this.updateUser();
   },
   watch: {
+    user: function() {
+      this.localUser = this.user;
+    },
     // При изменении локального состояния
     // отправляем объект наверх
     localUser: {
