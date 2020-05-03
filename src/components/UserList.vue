@@ -3,6 +3,9 @@
     <thead>
       <tr>
         <th>
+          id
+        </th>
+        <th>
           firstName
         </th>
         <th>
@@ -15,6 +18,9 @@
     </thead>
     <tbody>
       <tr v-for="item in list" :key="item.id">
+        <td>
+          <router-link :to="`/users/${item.id}`"> #{{ item.id }} </router-link>
+        </td>
         <td>
           {{ item.firstName }}
         </td>
