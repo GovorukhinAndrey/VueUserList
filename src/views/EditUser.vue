@@ -61,7 +61,9 @@ export default {
       axios.get(this.url).then(response => (this.user = response.data));
     },
     removeUser() {
-      console.log('удалить пользователя');
+      axios.delete(this.url).then(() => {
+        this.$route.push({ path: '/users' });
+      });
     },
     saveChanges() {
       axios.post(this.url, this.user).then(() => {
