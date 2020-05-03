@@ -43,5 +43,6 @@
 <style lang="scss">
 #app {
   margin-top: 80px;
+  margin-bottom: 20px;
 }
 </style>
