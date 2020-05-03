@@ -7,13 +7,12 @@
       ...Загрузка данных
     </div>
     <user-form v-else :user="user" @input="value => (user = value)"></user-form>
-    <!-- <user-form v-else :user="user"></user-form> -->
 
     <button type="button" class="btn btn-success btn-block" @click="saveChanges">
       Сохранить изменения
     </button>
     <button type="button" class="btn btn-danger btn-block" @click="removeUser">
-      Удлить пользователя
+      Удалить пользователя
     </button>
   </div>
 </template>
