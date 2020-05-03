@@ -2,18 +2,15 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>
-          id
-        </th>
-        <th>
-          firstName
-        </th>
-        <th>
-          lastName
-        </th>
-        <th>
-          Удалить
-        </th>
+        <th>id</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Активен</th>
+        <th>Баланс</th>
+        <th>Email</th>
+        <th>Телефон</th>
+        <th>Зарегистрирован</th>
+        <th>Удалить</th>
       </tr>
     </thead>
     <tbody>
@@ -21,14 +18,15 @@
         <td>
           <router-link :to="`/users/${item.id}`"> #{{ item.id }} </router-link>
         </td>
+        <td>{{ item.firstName }}</td>
+        <td>{{ item.lastName }}</td>
+        <td>{{ item.isActive }}</td>
+        <td>{{ item.balance }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.phone }}</td>
+        <td>{{ item.registered }}</td>
         <td>
-          {{ item.firstName }}
-        </td>
-        <td>
-          {{ item.lastName }}
-        </td>
-        <td>
-          <button type="button" @click="removeUser(item.id)">
+          <button type="button" class="btn btn-primary" @click="removeUser(item.id)">
             x
           </button>
         </td>
