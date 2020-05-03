@@ -21,6 +21,9 @@
           <router-link tag="li" class="nav-item" to="/users" active-class="active">
             <a class="nav-link" href="#">Список пользователей</a>
           </router-link>
+          <router-link tag="li" class="nav-item" to="/add-user" active-class="active">
+            <a class="nav-link" href="#">Добавить пользователя</a>
+          </router-link>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
           <input
@@ -44,5 +47,8 @@
 #app {
   margin-top: 80px;
   margin-bottom: 20px;
+}
+.btn-block {
+  margin-bottom: 15px;
 }
 </style>

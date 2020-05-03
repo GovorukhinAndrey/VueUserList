@@ -12,6 +12,10 @@ const routes = [
     component: Home,
   },
   {
+    path: '/add-user',
+    component: () => import(/* webpackChunkName: "add-user" */ '@/views/AddUser.vue'),
+  },
+  {
     path: '/users',
     component: () => import(/* webpackChunkName: "users" */ '@/views/Users.vue'),
   },
